@@ -33,8 +33,6 @@ function get_pages_from_ubnt_mfi_server($inputarray, $pages){
 	curl_setopt($sessioncreate, CURLOPT_COOKIEFILE, $inputarray['cookiefile']);
 	curl_setopt($sessioncreate, CURLOPT_COOKIEJAR, $inputarray['cookiefile']);
 	curl_setopt($sessioncreate, CURLOPT_FOLLOWLOCATION, 1);
-	curl_setopt($sessioncreate, CURLOPT_VERBOSE, true);
-	curl_setopt($sessioncreate, CURLOPT_STDERR, $verbose1);
 	curl_setopt($sessioncreate, CURLOPT_CONNECTTIMEOUT ,3); 
 	curl_setopt($sessioncreate, CURLOPT_TIMEOUT, 3); //timeout in seconds
 	curl_setopt($sessioncreate, CURLOPT_SSL_VERIFYPEER, FALSE);     
@@ -50,8 +48,6 @@ function get_pages_from_ubnt_mfi_server($inputarray, $pages){
 	curl_setopt($crl, CURLOPT_COOKIEFILE, $inputarray['cookiefile']);
 	curl_setopt($crl, CURLOPT_COOKIEJAR, $inputarray['cookiefile']);
 	curl_setopt($crl, CURLOPT_FOLLOWLOCATION, 1);
-	curl_setopt($crl, CURLOPT_VERBOSE, true);
-	curl_setopt($crl, CURLOPT_STDERR, $verbose2);
 	curl_setopt($crl, CURLOPT_SSL_VERIFYPEER, FALSE);    
 	curl_setopt($crl, CURLOPT_CONNECTTIMEOUT ,3); 
 	curl_setopt($crl, CURLOPT_TIMEOUT, 3); //timeout in seconds
