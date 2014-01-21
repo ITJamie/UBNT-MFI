@@ -73,24 +73,18 @@ function get_pages_from_ubnt_mfi_server($inputarray, $pages){
 	if ($headers['url'] == $inputarray['expectedpage']) {
 			$reply['auth'] = 'true';
 			$reply['url'] = $headers['url'];
-			//$reply['page'] = $result2;
-		
-		
-		 //echo 'loggedin';
+			
 	} else if ($headers['url'] == $inputarray['loginurl']) {
 			$reply['auth'] = 'false';
 			$reply['url'] = $headers['url'];
 			$reply['page'] = $result2;
 			return $reply;
 			
-		
 	} else {
 			$reply['auth'] = 'debug';
 			$reply['url'] = $headers['url'];
 			$reply['page'] = $result2;
 			return $reply;
-			
-		
 	}
 
 
